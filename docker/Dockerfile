@@ -5,6 +5,9 @@ FROM continuumio/anaconda3:2022.10
 # Install vim to use git and modify commit message by using it.
 RUN apt-get update && apt-get install -y vim
 
+# Install gcc/g++
+RUN apt-get install -y build-essential
+
 # Set timezone
 ENV TZ="Asia/Tokyo"
 
